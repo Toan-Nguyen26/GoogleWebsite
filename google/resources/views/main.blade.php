@@ -11,7 +11,7 @@
     <form method="GET" action="{{ url('index') }}">
         <button type="submit" class="btn btn-primary" name='logout'>Return</button>
      </form>
-    <div class='container'>  
+    <div class='container'>
     <?php
     $web = session('res');
     //echo var_dump($web);
@@ -26,17 +26,27 @@
                     echo "</tr>";
                 echo "</thead>";
                 echo "<tbody>";
-            
+
                 for($i = 0; $i < $count;$i++){
                 	$link = stripslashes(json_encode($web->hits->hits[$i]->_source->url));
+                    $des = $web->hits->hits[$i]->_source->description;
+                    $title = $web->hits->hits[$i]->_source->title;
+                    if(strlen($title) > 50){
+                        $title = substr($title, 0, 50);
+                        $title .= "...";
+                    }
+                    if(strlen($des) > 150){
+                        $des = substr($des, 0, 150);
+                        $des .= "...";
+                    }
                    echo "<tr>";
-                            echo "<td>" . $web->hits->hits[$i]->_source->title . "</td>";
-                            echo "<td>" . $web->hits->hits[$i]->_source->description . "</td>";
+                            echo "<td>" . $title . "</td>";
+                            echo "<td>" . $des ."</td>";
                             echo "<td>" . "<a href=$link >". $link ."</a>" ."</td>";
-                        echo "</tr>";    
-                 }      
-                   echo"</tbody>";    
-                echo "</table>";            
+                        echo "</tr>";
+                 }
+                   echo"</tbody>";
+                echo "</table>";
                }
      else{
     echo "ERROR: Could not able to execute at all";

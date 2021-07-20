@@ -13,8 +13,8 @@
 	<div class='box'>
 	<form action="{{ url('check') }}" method="POST">
 		{{ csrf_field() }}
-		<div class='google'>
-			<img src="css/google.png">
+		<div class="google">
+			<img src="css/google.png" class="img-responsive">
 		</div>
 		<div class='form-group'>
 	            <input type="text" class="form-control" id="nam" name="data" >
