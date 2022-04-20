@@ -1,12 +1,13 @@
-# Java-Web-App
+# GoogleWebsite
 
-The Java web app was built for Android phones. It functions like a normal Google Search App only with basic functionality like searching and refreshing, once the user search for a keyword it will send the user to another page to show the result.
+The website functions like a Google Search Website, the user put the keyword into a box and then moves them to a different website with all the sites that match the keyword
 
 # Technology
 
-- This app uses the same MySql database that was created and used in my [Google Search Website](https://github.com/Toan-Nguyen26/GoogleWebsite) using PHP
-- The app UI was in Java for more flexibility for different phone
+- A web crawler built by me to put over 10000 pages into a MySql database in PHP
+- The database then use Elasticseacrch, a tool to help speed up search time to under 3 seconds
+- The website is then connected to the database through a JSON file, and use for searching purposes 
 
 # Note
 
-The app was canceled and stopped working due to VM on Google Cloud expired on October, 2021.
+The app was canceled and stopped working due to VM on Google Cloud expired on October 2021.
