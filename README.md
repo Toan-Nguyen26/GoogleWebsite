@@ -10,4 +10,4 @@ The website functions like a Google Search Website, the user put the keyword int
 
 # Note
 
-The app was canceled and stopped working due to VM on Google Cloud expired on October 2021.
+The app was canceled and stopped working due on October 2021.
